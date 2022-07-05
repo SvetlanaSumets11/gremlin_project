@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "fastapiproject111"
+version = "0.1.0"
+description = ""
+authors = ["sumets <svitlana.sumets@nixsolutions.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.78.0"
+uvicorn = "^0.18.1"
+gremlinpython = "^3.6.0"
+environs = "^9.5.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
