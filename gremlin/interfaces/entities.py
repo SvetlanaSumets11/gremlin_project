@@ -1,7 +1,7 @@
 from gremlin_python.structure.graph import Vertex
 
 from config import AUTHOR, BOOK, USER, BORROW, BORROWED, RETURN
-from gremlin.interface.base import BaseEntity
+from gremlin.interfaces.base import BaseEntity
 
 
 class AuthorInterface(BaseEntity):

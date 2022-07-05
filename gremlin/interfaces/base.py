@@ -7,7 +7,7 @@ from gremlin_python.structure.graph import Vertex
 
 from config import DATATIME_FORMAT
 from gremlin.graph import get_traversal
-from models import Author, Book, User
+from gremlin.models import Author, Book, User
 
 
 class BaseEntity(ABC):
@@ -52,11 +52,11 @@ class BaseEntity(ABC):
 
     @classmethod
     def delete_vertex(cls, search_value: str):
-        if cls.is_exist('id', search_value):
+        if cls.is_exists('id', search_value):
             cls._entity.has('id', search_value).drop().iterate()
 
     @classmethod
-    def is_exist(cls, search_field: str, search_value: Any) -> bool:
+    def is_exists(cls, search_field: str, search_value: Any) -> bool:
         return cls._entity.has(search_field, search_value).hasNext()
 
     @classmethod
